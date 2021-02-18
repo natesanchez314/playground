@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Weapons/Colt m1911/uploads_files_2335974_colt.fbx" type="PackedScene" id=1]
+[ext_resource path="res://Weapons/Colt m1911/Textures/Colt_BaseColor.tga" type="Texture" id=2]
+[ext_resource path="res://Weapons/Colt m1911/Textures/Colt_Metalness.tga" type="Texture" id=3]
+[ext_resource path="res://Weapons/Colt m1911/Textures/Colt_Roughness.tga" type="Texture" id=4]
+[ext_resource path="res://Weapons/Colt m1911/Textures/Colt_Normal.tga" type="Texture" id=5]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 2 )
+metallic_texture = ExtResource( 3 )
+roughness_texture = ExtResource( 4 )
+normal_enabled = true
+normal_scale = 1.0
+normal_texture = ExtResource( 5 )
+
+[node name="uploads_files_2335974_colt" instance=ExtResource( 1 )]
+
+[node name="Colt_1912" parent="." index="0"]
+material/0 = SubResource( 1 )

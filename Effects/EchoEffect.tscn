@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Effects/EchoEffect.gd" type="Script" id=1]
+[ext_resource path="res://Shaders/EchoShader.tres" type="Material" id=2]
+
+[sub_resource type="SphereMesh" id=1]
+
+[node name="EchoEffect" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
